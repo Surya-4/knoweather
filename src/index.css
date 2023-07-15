@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.card{
+  margin: auto; 
+   margin-top: 10%;
+   background-color: black;
+   color: aliceblue;
+}
+
+.bg{
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  margin-top: 16%;
+  color: aliceblue;
+  text-align: center;
+}
+
+.input-group{
+  max-width: 30%;
+  margin: auto;
+}
