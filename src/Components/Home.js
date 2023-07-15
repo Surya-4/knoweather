@@ -9,7 +9,7 @@ export default function Home(props) {
     const {data,setData,city,setCity}=useContext(DataContext);
     let API_KEY=props.API_KEY;
     API_KEY=API_KEY.replaceAll('"', '');
-    API_KEY=API_KEY.slice(0,-1);
+    // API_KEY=API_KEY.slice(0,-1);
     const URL=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
     async function fetchData(){
         try {
