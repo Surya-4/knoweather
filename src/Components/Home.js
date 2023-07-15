@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios';
 import { useContext } from 'react'
 import { DataContext } from '../Context';
 import Background from './Background';
 
-export default function Home() {
+export default function Home(props) {
     const {data,setData,city,setCity}=useContext(DataContext);
-    const api='75dddad8ee1974a4e63741621c4df1d1';
-    const URL=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`
+    const apiKey=props.apiKey;
+    const URL=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
     async function fetchData(){
         try {
           const response=await axios.get(URL);
@@ -18,6 +18,10 @@ export default function Home() {
           alert('data not found');
         }
     }
+    useEffect(()=>{
+      console.log(apiKey)
+      console.log(URL);
+    })
   return (
     <>
       <div

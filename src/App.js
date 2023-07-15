@@ -3,10 +3,11 @@ import Home from './Components/Home';
 import { DataContextProvider } from './Context';
 
 function App() {
+  const apiKey=process.env.REACT_APP_API;
   return (
     <>
       <DataContextProvider>
-      <Home />
+      <Home apiKey={apiKey}/>
       </DataContextProvider>
     </>
   );
