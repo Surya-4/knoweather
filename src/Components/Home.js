@@ -5,9 +5,12 @@ import { DataContext } from '../Context';
 import Background from './Background';
 
 export default function Home(props) {
+  //process.env.REACT_APP_API
     const {data,setData,city,setCity}=useContext(DataContext);
-    const apiKey=props.apiKey;
-    const URL=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+    let API_KEY=props.API_KEY;
+    API_KEY=API_KEY.replaceAll('"', '');
+    API_KEY=API_KEY.slice(0,-1);
+    const URL=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
     async function fetchData(){
         try {
           const response=await axios.get(URL);
@@ -19,7 +22,8 @@ export default function Home(props) {
         }
     }
     useEffect(()=>{
-      console.log(apiKey)
+      console.log(city)
+      console.log(API_KEY)
       console.log(URL);
     })
   return (
