@@ -82,6 +82,9 @@ export default function Home(props) {
               <b>Temperature : {data && data.main ? data.main.temp : "-"}</b>
             </p>
             <p>
+              <b>Feels Like Temperature : {data && data.main ? data.main.feels_like : "-"}</b>
+            </p>
+            <p>
               <b>Humidity : {data && data.main ? data.main.humidity : "-"}</b>
             </p>
           </div>
