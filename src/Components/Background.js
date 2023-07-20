@@ -4,6 +4,10 @@ export default function Background(data) {
       id = data.weather[0].id;
     }
     function getImageUrl(weatherId) {
+      if(weatherId===0)
+      {
+        return '';
+      }
       if (weatherId >= 200 && weatherId < 300) {
         return 'https://i.gifer.com/Rnim.gif'; 
       } else if (weatherId >= 300 && weatherId < 400) {

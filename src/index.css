@@ -14,23 +14,32 @@ code {
 
 
 .card{
-  margin: auto; 
-   margin-top: 10%;
+  margin: auto;
+  margin-top: 10%;
    background-color: black;
    color: aliceblue;
+   
 }
 
 .bg{
   height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* align-items: center; */
 }
 
 .footer {
-  margin-top: 13%;
-  color: aliceblue;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   text-align: center;
+  color: aliceblue;
 }
 
 .input-group{
