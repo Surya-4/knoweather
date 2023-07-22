@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/knoweather/static/css/main.49bd3b46.css",
-    "main.js": "/knoweather/static/js/main.7e707655.js",
+    "main.js": "/knoweather/static/js/main.f1d1a6cc.js",
     "static/js/787.d4171257.chunk.js": "/knoweather/static/js/787.d4171257.chunk.js",
     "index.html": "/knoweather/index.html",
     "main.49bd3b46.css.map": "/knoweather/static/css/main.49bd3b46.css.map",
-    "main.7e707655.js.map": "/knoweather/static/js/main.7e707655.js.map",
+    "main.f1d1a6cc.js.map": "/knoweather/static/js/main.f1d1a6cc.js.map",
     "787.d4171257.chunk.js.map": "/knoweather/static/js/787.d4171257.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.49bd3b46.css",
-    "static/js/main.7e707655.js"
+    "static/js/main.f1d1a6cc.js"
   ]
 }
