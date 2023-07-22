@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import axios from 'axios';
 import { useContext } from 'react'
 import { DataContext } from '../Context';
@@ -15,17 +15,12 @@ export default function Home(props) {
         try {
           const response=await axios.get(URL);
         setData(response.data);
-        console.log(response);
+        console.log(response.data);
         } catch (error) {
           setData([]);
           alert('data not found');
         }
     }
-    useEffect(()=>{
-      console.log(city)
-      console.log(API_KEY)
-      console.log(URL);
-    })
   return (
     <>
       <div
@@ -71,21 +66,21 @@ export default function Home(props) {
               KnoWeather
             </h5>
             <p>
-              <b>City you're in : {data && data.name ? data.name : "-"}, {data && data.sys?data.sys.country:'-'}</b>
+              <b>City you're in : {data && data.name?data.name:'_' } {data && data.sys? `, ${data.sys.country}`:''}</b>
             </p>
             <p>
               <b>
-                Weather : {data && data.weather ? data.weather[0].main : "-"}
+                Weather : {data && data.weather ? data.weather[0].main : "_"}
               </b>
             </p>
             <p>
-              <b>Temperature : {data && data.main ? data.main.temp : "-"}</b>
+              <b>Temperature : {data && data.main ? (data.main.temp-273.15).toFixed(2) : "_"} &#8451;</b>
             </p>
             <p>
-              <b>Feels Like Temperature : {data && data.main ? data.main.feels_like : "-"}</b>
+              <b>Feels Like Temperature : {data && data.main ? (data.main.feels_like-273.15).toFixed(2) : "_"} &#8451;</b>
             </p>
             <p>
-              <b>Humidity : {data && data.main ? data.main.humidity : "-"}</b>
+              <b>Humidity : {data && data.main ? data.main.humidity : "_"} %</b>
             </p>
           </div>
         </div>
